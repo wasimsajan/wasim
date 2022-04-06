@@ -10,9 +10,11 @@ def extract_PR(project_full_name):
         project_full_name = "wasimsajan/devops_training"
         repo = g.get_repo(project_full_name)
         PRs_list = repo.get_pulls(state='all')
+        subject= "Summary of PR's"
         from_email = "was.sajan@gmail.com"
         to_email = "test@gmail.com"
         print(f'From Email : # {from_email}')
+        print(f'Subject : # {subject}')
         print(f'To  Email : # {to_email}')
         print(f"Please find below summary of PR for {project_full_name}")
         for pr in PRs_list:
