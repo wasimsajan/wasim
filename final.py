@@ -7,7 +7,7 @@ g = Github(token)
 def extract_PR(project_full_name):
     try:
         current_user = g.get_user()
-        project_full_name = "wasimsajan/devops_training"
+
         repo = g.get_repo(project_full_name)
         PRs_list = repo.get_pulls(state='all')
         subject= "Summary of PR's"
